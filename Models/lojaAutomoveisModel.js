@@ -13,15 +13,19 @@ class Veiculo {
         this.tipoVeiculo = tipoVeiculo;
         this.quantidadeRodas = quantidadeRodas;
     }
-    atualizarPrecos(novoPreco) {
-        this.preco = novoPreco;
-    }
-    consultarEstoque() {
-        return this.estoque;
-    }
     
     exibirDetalhes(){
-        console.log(`Veículo:`,this.tipoVeiculo,`| modelo:`,this.modelo,`| ano de fabricação:`,this.anoFabricacao,`| Preço: R$`,this.preco,'| fabricante:',this.fabricante,`| Cor:`,this.cor,`| Rodas:`,this.quantidadeRodas,`| Combustível:`,this.tipoCombustivel,`| Chassi: `,this.chassi,`| Tipo de farol:`,this.tipoFarol,`| Carga:`,this.carga,`kg | Estoque:`,this.estoque,` Unidades.`);
+        console.log(`Veículo:`,this.tipoVeiculo,'| Chassi:', this.chassi,`| modelo:`,this.modelo,`| ano de fabricação:`,this.anoFabricacao,`| Preço: R$`,this.preco,'| fabricante:',this.fabricante,`| Cor:`,this.cor,`| Rodas:`,this.quantidadeRodas,`| Combustível:`,this.tipoCombustivel,`| Chassi: `,this.chassi,`| Tipo de farol:`,this.tipoFarol,`| Carga:`,this.carga,`kg | Estoque:`,this.estoque,` Unidades.`);
+    }
+
+    atualizarPrecos(novoPreco) {
+        console.log('\n Preço anterior:', this.preco);
+        this.preco = novoPreco;
+        console.log(' Novo preço:', this.novoPreco);
+    }
+
+    consultarEstoque() {
+        console.log('\n Estoque:', this.estoque);
     }
     
     //exibirDetalhes() {
@@ -45,10 +49,19 @@ class Moto extends Veiculo {
         console.log(`| Cilindrada:`,this.cilindradas,`| cc. Tipo de partida:`,this.tipoPartida,`| Possui garupa:`,this.possuiGarupa,` .`);
     }
     
+    
     //apresentar(){
     //    super.apresentar();
     //    console.log(`| Cilindrada:`,this.cilindradas,`| cc. Tipo de partida:`,this.tipoPartida,`| Possui garupa:`,this.possuiGarupa,` .`);
     //}
+    atualizarPrecos(novoPreco) {
+        super.exibirDetalhes();
+        novoPreco = 30000
+    }
+    
+    consultarEstoque() {
+        super.consultarEstoque();
+    }
 }
 
 class Carro extends Veiculo {
@@ -69,6 +82,15 @@ class Carro extends Veiculo {
     //    console.log(`| Quantidade de portas:`,this.quantidadePortas,`| Número de assentos:`,this.numeroAssentos,`assentos.`);
     //    console.log(`\n`);
     //}
+    
+    atualizarPrecos(novoPreco) {
+        super.exibirDetalhes();
+        novoPreco = 2500000
+    }
+    
+    consultarEstoque() {
+        super.consultarEstoque();
+    }
 }
 
 const Ferrari = new Carro('Carro','123456789', 'Ferrari F8', 2020, 300000, 'Ferrari', 'Rosso Corsa','LED', 2, 5, 4, 'Gasolina', 2, 2);
@@ -78,3 +100,82 @@ Ferrari.exibirDetalhes();
 const HondaCB500 = new Moto('Moto','987654321', 'Honda CB500', 2021, 25000, 'Honda', 'Preta','Halógeno', 1, 10, 2, 'Gasolina', 500, 'Elétrica', true);
 HondaCB500.exibirDetalhes();
 //HondaCB500.apresentar();
+
+//======================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//
+//                  oooooooooooooooooooooooooo  
+//                ooooooooooo  ___         ooooooo 
+//               ooooo       /   /           oooooo 
+//              ooooo      /    /             ooooo
+//              ooooo    /     /             ooooo|
+//              |oooooo/      /o            ooooo |
+//              |  ooo|       |#####oooooo##### ##|
+//              |     |       |     ##  ##    ##  #
+//              |     |       |      ####      #  #
+//              oo    |       |      ####      #  #
+//              oooo  |       |     ##  ##    ##  #
+//                oooo|_______|#####oooooo#####o##
+//
+//
+//
+//
+//                          #|#####
+//                        ## |     ##
+//                       ##  |      ##
+//                       ##  |      ##    biscoito cortado
+//                        ## |     ##
+//                          #|#####
+//
+//
+//
+//
+//
+//
+//                        ______            
+//                       /     /|
+//                     /      / |
+//                   /       /  | 
+//                 /________/   |
+//                |##      #|   |
+//                |  ##  ## |   |
+//                |   ####  |   |
+//                |   ####  |  /
+//                | ##   ## | /
+//                |#_______#|/              esse pedaço está parecendo um console do Xbox
+//                                               
+//
+//
+//
+//
+// vou salvar isso daqui para mim mesma. Por favor, ignorem esta parte do código
